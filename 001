@@ -1,0 +1,70 @@
+package pi4j;
+import com.pi4j.io.gpio.GpioController;
+import com.pi4j.io.gpio.GpioFactory;
+import com.pi4j.io.gpio.GpioPinDigitalOutput;
+import com.pi4j.io.gpio.PinState;
+import com.pi4j.io.gpio.RaspiPin;
+
+
+public class Direcao {
+	
+	public class void main (String[] args) throws InterruptedException { 
+		
+System.out.println("<--Pi4J--> GPIO Stepper Motor Example ... started.");
+        
+        // create gpio controller
+        final GpioController gpio = GpioFactory.getInstance();
+        
+        // provision gpio pins #00 to #07 as output pins and ensure in LOW state
+        final GpioPinDigitalOutput[] pins = {
+                //MOTOR 1
+        		gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00, PinState.LOW),
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, PinState.LOW),
+                //MOTOR 2
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, PinState.LOW),
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_03, PinState.LOW),
+                //MOTOR 3
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, PinState.LOW),
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_05, PinState.LOW),
+                //MOTOR 4
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06, PinState.LOW),
+                gpio.provisionDigitalOutputPin(RaspiPin.GPIO_07, PinState.LOW)};
+	}
+	
+		void goAhead{
+			//MOTOR 1
+			gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00, PinState.HIGH),
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, PinState.LOW),
+            //MOTOR 2
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, PinState.HIGH),
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_03, PinState.LOW),
+            //MOTOR 3
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, PinState.HIGH),
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_05, PinState.LOW),
+            //MOTOR 4
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06, PinState.HIGH),
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_07, PinState.LOW)
+            };
+            
+        void goBack{
+    		//MOTOR 1
+   			gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00, PinState.LOW),
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, PinState.HIGH),
+            //MOTOR 2
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, PinState.LOW),
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_03, PinState.HIGH),
+            //MOTOR 3
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, PinState.LOW),
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_05, PinState.HIGH),
+            //MOTOR 4
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06, PinState.LOW),
+            gpio.provisionDigitalOutputPin(RaspiPin.GPIO_07, PinState.HIGH)
+            };   
+            
+            
+            
+		}
+		
+	
+	
+	
