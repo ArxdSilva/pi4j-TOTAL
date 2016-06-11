@@ -1,0 +1,13 @@
+MAS homeintel {
+
+	infrastructure: Centralised
+
+	agents:
+		agente0;
+		getInstance;
+		robot;
+		agent1 sample_agent;
+
+	aslSourcePath:
+		"src/asl";
+}

@@ -1,0 +1,12 @@
+MAS app {
+
+	infrastructure: Centralised
+
+	environment: app2
+
+	agents:
+		agent1 sample_agent;
+
+	aslSourcePath:
+		"src/asl";
+}
